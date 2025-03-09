@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fightinggg Sana! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="bounce">Fightinggg! Love youuu ❤️</h1>
+        <a href="index.html" class="back-button">Back to Home 🏠</a>
+    </div>
+
+    <!-- Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
+    <script>
+        // Function to trigger confetti effect
+        function startConfetti() {
+            var duration = 3 * 1000; // 3 seconds
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    spread: 90,
+                    origin: { y: 0.6 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        }
+
+        // Start confetti when the page loads
+        window.onload = startConfetti;
+    </script>
+</body>
+</html>
