@@ -24,6 +24,27 @@ body {
     width: 100%;
     animation: fadeIn 1.5s ease-in-out;
 }
+.nav-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    transform: rotate(-10deg);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+    background: #ff1493;
+    transform: rotate(-5deg) scale(1.1);
+}
 
 /* Animations */
 @keyframes fadeIn {
@@ -88,6 +109,13 @@ button:hover, .more-button:hover, .back-button:hover {
         font-size: 16px;
         padding: 12px 20px;
     }
+    .nav-button {
+        top: 15px;
+        right: 15px;
+        font-size: 14px;
+        padding: 10px 16px;
+        transform: rotate(-8deg);
+    }
 }
 
 @media (max-width: 480px) {
@@ -100,5 +128,10 @@ button:hover, .more-button:hover, .back-button:hover {
     button, .more-button, .back-button {
         font-size: 14px;
         padding: 10px 18px;
+    }
+    .nav-button {
+        font-size: 12px;
+        padding: 8px 14px;
+        transform: rotate(-3deg);
     }
 }
